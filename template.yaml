@@ -9,7 +9,6 @@ Description: >
 Globals:
   Function:
     Timeout: 30
-    Memory : 128
 
 Resources:
   HelloWorldFunction:
