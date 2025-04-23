@@ -11,21 +11,21 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
  */
 
 export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-    throw new Error("This will cause a deployment rollback")
-    // try {
-    //     return {
-    //         statusCode: 200,
-    //         body: JSON.stringify({
-    //             message: 'usando canary deployments',
-    //         }),
-    //     };
-    // } catch (err) {
-    //     console.log(err);
-    //     return {
-    //         statusCode: 500,
-    //         body: JSON.stringify({
-    //             message: 'some error happened',
-    //         }),
-    //     };
-    // }
+    // throw new Error("This will cause a deployment rollback")
+    try {
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                message: 'REUNIÓN AWS SAM',
+            }),
+        };
+    } catch (err) {
+        console.log(err);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({
+                message: 'some error happened',
+            }),
+        };
+    }
 };
